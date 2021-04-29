@@ -1,0 +1,3 @@
+[submodule "kNgine"]
+	path = kNgine
+	url = https://github.com/Redant136/kNgine.git
