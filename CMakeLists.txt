@@ -13,14 +13,17 @@ if(CMAKE_COMPILER_IS_GNUCXX)
   set(CMAKE_CXX_FLAGS "-Wall -Wextra")
   set(CMAKE_CXX_FLAGS_DEBUG "-g")
   set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+
 else()
+
   message(STATUS "cl detected, adding compile flags")
-  if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Debug)
-  endif()
-  set(CMAKE_CXX_FLAGS "-W3")
-  set(CMAKE_CXX_FLAGS_DEBUG "-DEBUG")
-  set(CMAKE_CXX_FLAGS_RELEASE "-Ox")
+  # if(NOT CMAKE_BUILD_TYPE)
+  #   set(CMAKE_BUILD_TYPE Debug)
+  # endif()
+  # set(CMAKE_CXX_FLAGS "-W3")
+  # set(CMAKE_CXX_FLAGS_DEBUG "-DEBUG")
+  # set(CMAKE_CXX_FLAGS_RELEASE "-Ox")
+
 endif(CMAKE_COMPILER_IS_GNUCXX)
 
 
@@ -29,7 +32,11 @@ if(APPLE)
   include_directories ( /usr/local/include) 
 endif()
 
+file(COPY mcSpriteSheet.png DESTINATION ${CMAKE_BINARY_DIR}/)
+
+# add_executable(CallOfRizan kNgine/examples/general/frameworkTest.c)
 add_executable(CallOfRizan CallOfRizan.cpp)
+
 
 add_subdirectory(kNgine)
 target_link_libraries(CallOfRizan PUBLIC kNgine)
