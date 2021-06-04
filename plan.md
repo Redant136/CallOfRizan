@@ -1,0 +1,3 @@
+- sword styles
+- grapple hook
+- 

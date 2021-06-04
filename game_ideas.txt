@@ -1,0 +1,37 @@
+wake up in body cart
+no sword style equiped allows to do something (higher jump)
+grapple allows to throw sword
+grapple used similarly to terraria
+heavy attack = bow
+light + heavy same time = new move
+rage meter builds with dmg, more rage=> more dmg dealt, reduce rage to heal
+last stand skill, at death, stay alive for moment and heal if ennemy killed
+underground villages to protect from monsters
+switching between heavy and light mid-combo only unlocked later on
+different weapons have different reach
+charge attack
+speed wagon hat attack
+
+actions:
+light
+heavy
+grapple
+dash/dodge only unlocked at the end, ignores attacks
+counter?
+
+
+
+
+abxy, light heavy jump heal/special
+up to interact
+
+---
+wasd+space: control
+p: heavy
+l: light
+m: dash
+,: grapple
+o: uncommon action
+k: uncommon action2
+i: inv
+n: map
