@@ -10,7 +10,6 @@ int main()
   kNgine::window_name = "CallOfRizan";
   kNgine::window_size = v2(1980, 1080);
 
-  // kNgine::addObject(MainCamera);
 
   kNgine::addObject(character);
 
@@ -21,7 +20,7 @@ int main()
     // kNgine::physics::cpPhysicsBodyComponent *floorPhys = new kNgine::physics::b2Rect(floor, 20, 1, 50, 0.5f);
     // floorPhys->setStatic(false);
 
-    kNgine::physics::kPhysicsBodyComponent *floorPhys = kNgine::physics::kPhysicsBodyComponent::staticBody(floor, kNgine::physics::kHitBoxRect(v2(20, 1), 1,0.5));
+    kNgine::kPhysicsBodyComponent *floorPhys = kNgine::kPhysicsBodyComponent::staticBody(floor, kNgine::kHitBoxRect(v2(20, 1), 1, 0.5));
     floor->addComponent(floorPhys);
 
     kNgine::SpriteComponent *floorSpr = new kNgine::SpriteComponent(floor, kNgine::fillSprite(200, 200, {0, 255, 0, 255}));
@@ -30,9 +29,9 @@ int main()
 
     kNgine::addObject(floor);
   }
+  kNgine::addObject(new kNgine::cpPhysicsEngine(v2(0,-1)));
 
-  kNgine::addObject(new kNgine::physics::cpPhysicsEngine(v2(0,-1)));
-  kNgine::addObject(new kNgine::physics::cpPhysicsRenderer(MainCamera));
+  kNgine::addObject(new kNgine::kPhysicsRenderer(MainCamera));
 
   kNgine::start();
   kNgine::cleanup();
